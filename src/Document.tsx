@@ -17,7 +17,9 @@ export default function Document(props: ParentProps) {
         </noscript>
         <title>Jarona It</title>
       </head>
-      <body class="font-sans font-not-papyrus">{props.children}</body>
+      <body style="background-color:black" class="font-sans font-not-papyrus">
+        {props.children}
+      </body>
     </html>
   );
 }

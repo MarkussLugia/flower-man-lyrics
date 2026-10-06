@@ -97,29 +97,64 @@
         scale: 1.4;
     }
 }
+@keyframes pounding6 {
+    from {
+        scale: 1.6;
+    }
+    to {
+        scale: 1.5;
+    }
+}
 
 .lyric-pounding1 {
     animation-name: pounding1;
     animation-duration: 0.375s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
 }
 .lyric-pounding2 {
     animation-name: pounding2;
     animation-duration: 0.375s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
 }
 .lyric-pounding3 {
     animation-name: pounding3;
     animation-duration: 0.375s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
 }
 .lyric-pounding4 {
     animation-name: pounding4;
     animation-duration: 0.375s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
 }
 .lyric-pounding5 {
     animation-name: pounding5;
     animation-duration: 0.375s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+.lyric-pounding5 {
+    animation-name: pounding6;
+    animation-duration: 0.375s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes running-bar-anim {
+    from {
+        left: 0;
+    }
+    to {
+        left: -25vw;
+    }
+}
+.running-bar {
+    animation-name: running-bar-anim;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }

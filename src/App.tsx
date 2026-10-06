@@ -57,87 +57,100 @@ export default function App() {
   const chorusLines = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 27, 28, 29, 30, 31, 32, 33, 34, 35];
   const isChoros = createMemo<boolean>(() => chorusLines.includes(currentPage()));
   return (
-    <div
-      class={[
-        "w-screen h-screen fixed left-0 top-0 flex items-center justify-center bg-black text-center",
-        {
-          "font-ja": langJa(),
-          "text-yellow-300": isChoros(),
-          "text-white": !isChoros(),
-        },
-      ]}
-    >
-      <div
-        class={[
-          "absolute z-20 w-full h-12 left-0 rainbow transition-all duration-500",
-          {
-            "top-0 opacity-100": isChoros(),
-            "-top-6 opacity-0": !isChoros(),
-          },
-        ]}
-      ></div>
-      <div
-        class={[
-          "absolute z-20 w-full h-12 left-0 rainbow transition-all duration-500",
-          {
-            "bottom-0 opacity-100": chorusLines.includes(currentPage()),
-            "-bottom-6 opacity-0": !chorusLines.includes(currentPage()),
-          },
-        ]}
-      ></div>
-      <div
-        class={[
-          "absolute z-10 w-full h-12 left-0 bg-[#00FF00] transition-all duration-500",
-          {
-            "top-0": chorusLines.includes(currentPage()),
-            "-top-6": !chorusLines.includes(currentPage()),
-            "opacity-0": currentPage() === 36,
-          },
-        ]}
-      ></div>
-      <div
-        class={[
-          "absolute z-10 w-full h-12 left-0 bg-[#00FF00] transition-all duration-500",
-          {
-            "bottom-0": isChoros(),
-            "-bottom-6": !isChoros(),
-            "opacity-0": currentPage() === 36,
-          },
-        ]}
-      ></div>
-      <div class="w-0 max-w-0 relative leading-52">
-        <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight">
-          <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
-        </div>
+    <>
+      <div class={["w-screen h-screen fixed z-0 top-0 bg-black running-bar"]}>
+        <div class="h-screen w-3 top-0 bg-neutral-700 absolute left-[100vw]"></div>
+        <div class="h-screen w-3 top-0 bg-neutral-700 absolute left-[75vw]"></div>
+        <div class="h-screen w-3 top-0 bg-neutral-700 absolute left-[50vw]"></div>
+        <div class="h-screen w-3 top-0 bg-neutral-700 absolute left-[25vw]"></div>
       </div>
-      <Show when={isChoros()}>
-        <div class="w-0 max-w-0 relative leading-52 lyric-pounding1 origin-center">
-          <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-5">
+      <div
+        class={[
+          "w-screen h-screen fixed z-50 left-0 top-0 flex items-center justify-center text-center",
+          {
+            "font-ja": langJa(),
+            "text-yellow-300": isChoros(),
+            "text-white": !isChoros(),
+          },
+        ]}
+      >
+        <div
+          class={[
+            "absolute z-20 w-full h-12 left-0 rainbow transition-all duration-500",
+            {
+              "top-0 opacity-100": isChoros(),
+              "-top-6 opacity-0": !isChoros(),
+            },
+          ]}
+        ></div>
+        <div
+          class={[
+            "absolute z-20 w-full h-12 left-0 rainbow transition-all duration-500",
+            {
+              "bottom-0 opacity-100": chorusLines.includes(currentPage()),
+              "-bottom-6 opacity-0": !chorusLines.includes(currentPage()),
+            },
+          ]}
+        ></div>
+        <div
+          class={[
+            "absolute z-10 w-full h-12 left-0 bg-[#00FF00] transition-all duration-500",
+            {
+              "top-0": chorusLines.includes(currentPage()),
+              "-top-6": !chorusLines.includes(currentPage()),
+              "opacity-0": currentPage() === 36,
+            },
+          ]}
+        ></div>
+        <div
+          class={[
+            "absolute z-10 w-full h-12 left-0 bg-[#00FF00] transition-all duration-500",
+            {
+              "bottom-0": isChoros(),
+              "-bottom-6": !isChoros(),
+              "opacity-0": currentPage() === 36,
+            },
+          ]}
+        ></div>
+        <div class="w-0 max-w-0 relative leading-52">
+          <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight">
             <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
           </div>
         </div>
-        <div class="w-0 max-w-0 relative leading-52 lyric-pounding2 origin-center">
-          <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-5">
-            <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+        <Show when={isChoros()}>
+          <div class="w-0 max-w-0 relative leading-52 lyric-pounding1 origin-center">
+            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-7">
+              <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+            </div>
           </div>
-        </div>
-        <div class="w-0 max-w-0 relative leading-52 lyric-pounding3 origin-center">
-          <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-5">
-            <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+          <div class="w-0 max-w-0 relative leading-52 lyric-pounding2 origin-center">
+            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-7">
+              <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+            </div>
           </div>
-        </div>
-        <div class="w-0 max-w-0 relative leading-52 lyric-pounding4 origin-center">
-          <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-5">
-            <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+          <div class="w-0 max-w-0 relative leading-52 lyric-pounding3 origin-center">
+            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-7">
+              <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+            </div>
           </div>
-        </div>
-        <div class="w-0 max-w-0 relative leading-52 lyric-pounding5 origin-center">
-          <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-5">
-            <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+          <div class="w-0 max-w-0 relative leading-52 lyric-pounding4 origin-center">
+            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-7">
+              <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+            </div>
           </div>
-        </div>
-      </Show>
-    </div>
+          <div class="w-0 max-w-0 relative leading-52 lyric-pounding5 origin-center">
+            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-7">
+              <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+            </div>
+          </div>
+          <div class="w-0 max-w-0 relative leading-52 lyric-pounding6 origin-center">
+            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-7">
+              <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+            </div>
+          </div>
+        </Show>
+      </div>
+    </>
   );
 }
 
