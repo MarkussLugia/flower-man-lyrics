@@ -1,12 +1,125 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: "DeterminationMono";
-    src: url("determinationmonoweb-webfont.woff") format("woff");
+    font-family: "DeterminationSans";
+    src: url("DeterminationSansWebRegular.ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Fusion Pixel 10px Prop latin";
+    src: url("fusion-pixel-10px-monospaced-ja.otf.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
 }
 
 .font-not-papyrus {
-    font-family: DeterminationMono;
+    font-family: DeterminationSans, "Fusion Pixel 10px Prop latin";
+}
+
+.font-ja {
+    font-family: "Fusion Pixel 10px Prop latin";
+}
+
+.lyrics {
+    transform-origin: center;
+    scale: calc(100vw / 1200px);
+}
+
+@keyframes souls {
+    from {
+        background-color: hsl(0, 98%, 55%);
+    }
+    16.666% {
+        background-color: hsl(55, 100%, 50%);
+    }
+    33.333% {
+        background-color: hsl(130, 100%, 50%);
+    }
+    50% {
+        background-color: hsl(180, 100%, 55%);
+    }
+    66.666% {
+        background-color: hsl(235, 100%, 55%);
+    }
+    83.333% {
+        background-color: hsl(290, 100%, 55%);
+    }
+    100% {
+        background-color: hsl(0, 95%, 55%);
+    }
+}
+
+.rainbow {
+    animation-name: souls;
+    animation-duration: 2.25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pounding1 {
+    from {
+        scale: 1.1;
+    }
+    to {
+        scale: 1;
+    }
+}
+@keyframes pounding2 {
+    from {
+        scale: 1.2;
+    }
+    to {
+        scale: 1.1;
+    }
+}
+@keyframes pounding3 {
+    from {
+        scale: 1.3;
+    }
+    to {
+        scale: 1.2;
+    }
+}
+@keyframes pounding4 {
+    from {
+        scale: 1.4;
+    }
+    to {
+        scale: 1.3;
+    }
+}
+@keyframes pounding5 {
+    from {
+        scale: 1.5;
+    }
+    to {
+        scale: 1.4;
+    }
+}
+
+.lyric-pounding1 {
+    animation-name: pounding1;
+    animation-duration: 0.375s;
+    animation-iteration-count: infinite;
+}
+.lyric-pounding2 {
+    animation-name: pounding2;
+    animation-duration: 0.375s;
+    animation-iteration-count: infinite;
+}
+.lyric-pounding3 {
+    animation-name: pounding3;
+    animation-duration: 0.375s;
+    animation-iteration-count: infinite;
+}
+.lyric-pounding4 {
+    animation-name: pounding4;
+    animation-duration: 0.375s;
+    animation-iteration-count: infinite;
+}
+.lyric-pounding5 {
+    animation-name: pounding5;
+    animation-duration: 0.375s;
+    animation-iteration-count: infinite;
 }

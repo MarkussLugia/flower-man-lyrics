@@ -1,45 +1,79 @@
 import { Element } from "solid-js";
 
-let lyrics: (Element | null)[][] = [
-  [<div>Ten feet twenty</div>, <div>the Flower Man</div>],
-  [<div>Is waiting for the</div>, <div>touch of his hand</div>],
-  [<div>Straightening petals out</div>, <div>without a plan</div>],
-  [<div>Like the</div>, <div>every daily</div>],
-  [<div>Wish that bothers</div>, <div>the Flower Man</div>],
-  [<div>Could I do something</div>, <div>to make him laugh</div>],
-  [<div>Inside my little chamber</div>, <div>made of glass</div>],
-  [<div>So he lived the</div>],
+let lyrics: (String[] | null)[] = [
+  ["Ten feet twenty", "the Flower Man"],
 
-  [<div>Flower Man,</div>, <div>Flower Man</div>],
-  [<div>With his heart</div>, <div>in the sand</div>],
-  [<div>So he stands</div>],
-  [<div>To watch the</div>, <div>whole wide world</div>],
-  [<div>From a can</div>],
-  [<div>Way up high</div>, <div>in the sky</div>],
-  [<div>With the sun</div>, <div>in his eyes</div>],
-  [<div>Ain't it nice</div>],
-  [<div>The life</div>, <div>forever for</div>],
-  [<div>Flowers</div>],
+  ["Is waiting", "for the touch", "of his hand"],
 
-  [<div>Ten feet twenty</div>, <div>the Flower Man</div>],
-  [<div>Is waiting for the</div>, <div>touch of his hand</div>],
-  [<div>Fallen to pieces still</div>, <div>without a plan</div>],
-  [<div>Yet the</div>, <div>every daily</div>],
-  [<div>Hope that powered</div>, <div>the Flower Man</div>],
-  [<div>Would never cower off</div>, <div>of its path</div>],
-  [<div>Even if broken I am</div>, <div>more than glass</div>],
-  [<div>So he lived the</div>],
+  ["Straightening", "petals out", "without a plan"],
 
-  [<div>Flower Man,</div>, <div>Flower Man</div>],
-  [<div>With his heart</div>, <div>in the sand</div>],
-  [<div>So he stands</div>],
-  [<div>To watch the</div>, <div>whole wide world</div>],
-  [<div>From a can</div>],
-  [<div>Way up high</div>, <div>in the sky</div>],
-  [<div>With the sun</div>, <div>in your eyes</div>],
-  [<div>Ain't it nice</div>],
-  [<div>The life</div>, <div>forever for</div>],
-  [<div>Flowers</div>],
+  ["Like the", "every daily"],
+
+  ["Wish that bothers", "the Flower Man"],
+
+  ["Could I do", "something to", "make him laugh"],
+
+  ["Inside my", "little chamber", "made of glass"],
+
+  ["So he", "lived the"],
+
+  ["Flower Man,", "Flower Man"],
+
+  ["With his heart", "in the sand"],
+
+  ["So he stands"],
+
+  ["To watch the", "whole wide world"],
+
+  ["From a can"],
+
+  ["Way up high", "in the sky"],
+
+  ["With the sun", "in his eyes"],
+
+  ["Ain't it nice"],
+
+  ["The life", "forever for"],
+
+  ["Flowers"],
+
+  null,
+
+  ["Ten feet twenty", "the Flower Man"],
+
+  ["Is waiting", "for the touch", "of his hand"],
+
+  ["Fallen to pieces", "still", "without a plan"],
+
+  ["Yet the", "every daily"],
+
+  ["Hope that powered", "the Flower Man"],
+
+  ["Would never", "cower off", "of its path"],
+
+  ["Even if", "broken I am", "more than glass"],
+
+  ["So he", "lived the"],
+
+  ["Flower Man,", "Flower Man"],
+
+  ["With his heart", "in the sand"],
+
+  ["So he stands"],
+
+  ["To watch the", "whole wide world"],
+
+  ["From a can"],
+
+  ["Way up high", "in the sky"],
+
+  ["With the sun", "in your eyes"],
+
+  ["Ain't it nice"],
+
+  ["The life", "forever for"],
+
+  ["Flowers"],
 ];
 
 export default lyrics;
