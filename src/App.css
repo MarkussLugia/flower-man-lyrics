@@ -2,14 +2,14 @@
 
 @font-face {
     font-family: "DeterminationSans";
-    src: url("DeterminationSansWebRegular.ttf");
+    src: url("/assets/DeterminationSansWebRegular.ttf");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Fusion Pixel 10px Prop latin";
-    src: url("fusion-pixel-10px-monospaced-ja.otf.woff2") format("woff2");
+    src: url("/assets/fusion-pixel-10px-monospaced-ja.otf.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
 }
