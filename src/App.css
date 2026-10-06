@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "DeterminationMono";
+    src: url("determinationmonoweb-webfont.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+.font-not-papyrus {
+    font-family: DeterminationMono;
+}
