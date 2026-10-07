@@ -65,6 +65,8 @@ export default function App() {
         <div class="h-screen w-3 top-0 bg-neutral-800 absolute left-[50vw]"></div>
         <div class="h-screen w-3 top-0 bg-neutral-800 absolute left-[20vw]"></div>
       </div>
+      <div class="fixed -z-10 opacity-0 font-ja">placeholder</div>
+      <img src={flowery} loading="eager" class="flowery-image fixed w-3xl mb-8 -z-10 opacity-0" />
       <div
         class={[
           "w-screen h-screen fixed z-50 left-0 top-0 flex items-center justify-center text-center select-none",
@@ -181,7 +183,7 @@ export default function App() {
 
 function LyricsLines(props: { data: (string | string[] | null)[] | null; isJa: boolean }) {
   return (
-    <div>
+    <div class={{ "leading-60": props.isJa }}>
       {props.data ? (
         <For each={props.data}>
           {(section) => {
@@ -200,7 +202,7 @@ function LyricsLines(props: { data: (string | string[] | null)[] | null; isJa: b
           }}
         </For>
       ) : props.isJa ? (
-        <div class="text-neutral-500">
+        <div class="text-neutral-500 leading-52">
           インストゥル-
           <br />
           メンタル
