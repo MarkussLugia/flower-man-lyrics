@@ -1,77 +1,75 @@
-import { Element } from "solid-js";
+let lyrics: ((string | string[] | null)[] | null)[] = [
+  ["Ten feet twenty", null, "the Flower Man"],
 
-let lyrics: (String[] | null)[] = [
-  ["Ten feet twenty", "the Flower Man"],
+  ["Is waiting", null, "for the touch", null, "of his hand"],
 
-  ["Is waiting", "for the touch", "of his hand"],
+  ["Straightening", null, "petals out", null, "without a plan"],
 
-  ["Straightening", "petals out", "without a plan"],
+  ["Like the", null, "every daily"],
 
-  ["Like the", "every daily"],
+  ["Wish that bothers", null, "the Flower Man"],
 
-  ["Wish that bothers", "the Flower Man"],
+  ["Could I do", null, "something to", null, "make him laugh"],
 
-  ["Could I do", "something to", "make him laugh"],
+  ["Inside my", null, "little chamber", null, "made of glass"],
 
-  ["Inside my", "little chamber", "made of glass"],
+  ["So he", null, "lived the"],
 
-  ["So he", "lived the"],
+  ["Flower Man,", null, "Flower Man"],
 
-  ["Flower Man,", "Flower Man"],
-
-  ["With his heart", "in the sand"],
+  ["With his heart", null, "in the sand"],
 
   ["So he stands"],
 
-  ["To watch the", "whole wide world"],
+  ["To watch the", null, "whole wide world"],
 
   ["From a can"],
 
-  ["Way up high", "in the sky"],
+  ["Way up high", null, "in the sky"],
 
-  ["With the sun", "in his eyes"],
+  ["With the sun", null, "in his eyes"],
 
   ["Ain't it nice"],
 
-  ["The life", "forever for"],
+  ["The life", null, "forever for"],
 
   ["Flowers"],
 
   null,
 
-  ["Ten feet twenty", "the Flower Man"],
+  ["Ten feet twenty", null, "the Flower Man"],
 
-  ["Is waiting", "for the touch", "of his hand"],
+  ["Is waiting", null, "for the touch", null, "of his hand"],
 
-  ["Fallen to pieces", "still", "without a plan"],
+  ["Fallen to pieces", null, "still", null, "without a plan"],
 
-  ["Yet the", "every daily"],
+  ["Yet the", null, "every daily"],
 
-  ["Hope that powered", "the Flower Man"],
+  ["Hope that powered", null, "the Flower Man"],
 
-  ["Would never", "cower off", "of its path"],
+  ["Would never", null, "cower off", null, "of its path"],
 
-  ["Even if", "broken I am", "more than glass"],
+  ["Even if", null, "broken I am", null, "more than glass"],
 
-  ["So he", "lived the"],
+  ["So he", null, "lived the"],
 
-  ["Flower Man,", "Flower Man"],
+  ["Flower Man,", null, "Flower Man"],
 
-  ["With his heart", "in the sand"],
+  ["With his heart", null, "in the sand"],
 
   ["So he stands"],
 
-  ["To watch the", "whole wide world"],
+  ["To watch the", null, "whole wide world"],
 
   ["From a can"],
 
-  ["Way up high", "in the sky"],
+  ["Way up high", null, "in the sky"],
 
-  ["With the sun", "in your eyes"],
+  ["With the sun", null, "in your eyes"],
 
   ["Ain't it nice"],
 
-  ["The life", "forever for"],
+  ["The life", null, "forever for"],
 
   ["Flowers"],
 ];

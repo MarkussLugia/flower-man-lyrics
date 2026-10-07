@@ -1,7 +1,8 @@
-import { createMemo, createSignal, Element, Show, For } from "solid-js";
+import { createMemo, createSignal, Show, For } from "solid-js";
 import "./App.css";
 import lyricsEn from "./data/lyrics-en";
-import lyricsJa from "./data/lyrics-ja"; // placeholder, replace later
+import lyricsJa from "./data/lyrics-ja";
+import flowery from "./Flowery_overworld_container_broken.png";
 
 export default function App() {
   const maxIndex = lyricsEn.length;
@@ -59,14 +60,14 @@ export default function App() {
   return (
     <>
       <div class={["w-screen h-screen fixed z-0 top-0 bg-black running-bar"]}>
-        <div class="h-screen w-3 top-0 bg-neutral-700 absolute left-[100vw]"></div>
-        <div class="h-screen w-3 top-0 bg-neutral-700 absolute left-[75vw]"></div>
-        <div class="h-screen w-3 top-0 bg-neutral-700 absolute left-[50vw]"></div>
-        <div class="h-screen w-3 top-0 bg-neutral-700 absolute left-[25vw]"></div>
+        <div class="h-screen w-3 top-0 bg-neutral-800 absolute left-[110vw]"></div>
+        <div class="h-screen w-3 top-0 bg-neutral-800 absolute left-[80vw]"></div>
+        <div class="h-screen w-3 top-0 bg-neutral-800 absolute left-[50vw]"></div>
+        <div class="h-screen w-3 top-0 bg-neutral-800 absolute left-[20vw]"></div>
       </div>
       <div
         class={[
-          "w-screen h-screen fixed z-50 left-0 top-0 flex items-center justify-center text-center",
+          "w-screen h-screen fixed z-50 left-0 top-0 flex items-center justify-center text-center select-none",
           {
             "font-ja": langJa(),
             "text-yellow-300": isChoros(),
@@ -113,39 +114,63 @@ export default function App() {
           ]}
         ></div>
         <div class="w-0 max-w-0 relative leading-52">
-          <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight">
-            <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+          <div class="lyrics relative -left-384 w-768 flex flex-col items-center justify-center text-[11rem] tracking-tight">
+            <Show when={currentPage() === 36}>
+              <img src={flowery} class="flowery-image w-3xl mb-8" />
+            </Show>
+            <LyricsLines
+              data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]}
+              isJa={langJa()}
+            />
           </div>
         </div>
         <Show when={isChoros()}>
           <div class="w-0 max-w-0 relative leading-52 lyric-pounding1 origin-center">
-            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-7">
-              <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-9">
+              <LyricsLines
+                data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]}
+                isJa={langJa()}
+              />
             </div>
           </div>
           <div class="w-0 max-w-0 relative leading-52 lyric-pounding2 origin-center">
-            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-7">
-              <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-9">
+              <LyricsLines
+                data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]}
+                isJa={langJa()}
+              />
             </div>
           </div>
           <div class="w-0 max-w-0 relative leading-52 lyric-pounding3 origin-center">
-            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-7">
-              <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-9">
+              <LyricsLines
+                data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]}
+                isJa={langJa()}
+              />
             </div>
           </div>
           <div class="w-0 max-w-0 relative leading-52 lyric-pounding4 origin-center">
-            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-7">
-              <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-9">
+              <LyricsLines
+                data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]}
+                isJa={langJa()}
+              />
             </div>
           </div>
           <div class="w-0 max-w-0 relative leading-52 lyric-pounding5 origin-center">
-            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-7">
-              <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-9">
+              <LyricsLines
+                data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]}
+                isJa={langJa()}
+              />
             </div>
           </div>
           <div class="w-0 max-w-0 relative leading-52 lyric-pounding6 origin-center">
-            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-7">
-              <LyricsLines data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]} isJa={langJa()} />
+            <div class="lyrics relative -left-384 w-768 flex flex-col text-[11rem] tracking-tight opacity-9">
+              <LyricsLines
+                data={langJa() ? lyricsJa[currentPage()] : lyricsEn[currentPage()]}
+                isJa={langJa()}
+              />
             </div>
           </div>
         </Show>
@@ -154,17 +179,25 @@ export default function App() {
   );
 }
 
-function LyricsLines(props: { data: String[] | null; isJa: boolean }) {
+function LyricsLines(props: { data: (string | string[] | null)[] | null; isJa: boolean }) {
   return (
     <div>
       {props.data ? (
         <For each={props.data}>
-          {(str) => (
-            <>
-              {str}
-              <br />
-            </>
-          )}
+          {(section) => {
+            if (!section) {
+              return <br />;
+            } else if (typeof section === "string") {
+              return <span>{section}</span>;
+            } else {
+              return (
+                <span class="mark-container inline-flex flex-col items-center justify-center">
+                  <div class="translate-y-10">{section[0]}</div>
+                  <div class="text-8xl -translate-y-64 tracking-normal">{section[1]}</div>
+                </span>
+              );
+            }
+          }}
         </For>
       ) : props.isJa ? (
         <div class="text-neutral-500">
